@@ -4,6 +4,7 @@
 
 # keys/tokens
 keys.plist
+GoogleService-Info.plist
 
 ## User settings
 xcuserdata/

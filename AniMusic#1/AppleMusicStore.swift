@@ -36,6 +36,7 @@ class AppleMusicStore: ObservableObject {
         components.host   = "api.music.apple.com"
         components.path   = "/v1/me/library/playlists"
 
+        // create array of song data
         var songDataArray: [[String: String]] = anime.songs.map { song in
             return ["id": song.id,
                     "type": song.type.rawValue]
