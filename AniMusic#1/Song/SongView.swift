@@ -15,6 +15,7 @@ struct SongView: View {
 
     var storeId: String
     @EnvironmentObject var player: PlayManager
+    let padding: CGFloat = 20
     
     init (song: Song) {
         self.song = song
@@ -24,36 +25,41 @@ struct SongView: View {
     var song: Song
 
 
-
     var body: some View {
-        VStack {
-            Image(uiImage: song.image ?? UIImage(systemName: "photo")!)
-                .resizable()
-                .aspectRatio(1, contentMode: .fit)
-                .padding(.horizontal)
-            Text(song.name)
+        GeometryReader { g in
 
-            Text(song.artist)
+            VStack {
 
-            ZStack {
-                Rectangle()
-                    .fill(Color.blue)
-                    .cornerRadius(7)
-                    .onTapGesture {
-                        if let url = URL(string: self.song.appleMusicURL) {
-                            UIApplication.shared.open(url)
-                        }
-                }
+                Image(uiImage: self.song.image ?? UIImage(systemName: "photo")!)
+                    .resizable()
+                    .aspectRatio(1, contentMode: .fit)
+                    .frame(width: g.size.width - self.padding, height: g.size.width - self.padding)
 
-                Text("+")
-                    .font(.title)
+                Text(self.song.name)
+
+                Text(self.song.artist)
+
+                PlayerControls(storeId: self.storeId)
+                    .padding(.horizontal, self.padding)
+
+                ZStack {
+                    Rectangle()
+                        .fill(Color.black)
+                        .cornerRadius(3)
+                        .onTapGesture {
+                            if let url = URL(string: self.song.appleMusicURL) {
+                                UIApplication.shared.open(url)
+                            }
+                    }
+
+                    Text("+ add song to Library")
+                        .foregroundColor(Color.white)
+
+                } // ZStack
+                    .padding(.horizontal, self.padding)
             }
-
-
-            PlayerControls(storeId: self.storeId)
-
-
         }
+
     }
 }
 

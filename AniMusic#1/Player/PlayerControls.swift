@@ -32,18 +32,21 @@ struct PlayerControls: View {
     var body: some View {
         GeometryReader { g in
 
-            HStack {
+            ZStack {
+                Rectangle()
+                    .fill(Color.black)
+                    .cornerRadius(3)
                 Image(systemName: self.playbackStateImageName)
                     .resizable()
-                    .foregroundColor(Color.red)
-                    .frame(width: g.size.width/2, height: g.size.width/2)
-                    .onTapGesture {
+                    .frame(height: g.size.height)
+                    .aspectRatio(1, contentMode: .fit)
+                    .foregroundColor(Color.white)
 
-                        self.playManager.playBtnTapped(storeId: self.storeId)
-                        self.setPlaybackStateImage()
-                }// imageTapGesture
-                Text("\(self.playManager.currentPlaybackTime)")
-            } // HStack
+            } // ZStack
+            .onTapGesture {
+                self.playManager.playBtnTapped(storeId: self.storeId)
+                self.setPlaybackStateImage()
+            }
         }
         .onAppear(perform: {
             // if storeId matched current playing item - reflect the playback state
