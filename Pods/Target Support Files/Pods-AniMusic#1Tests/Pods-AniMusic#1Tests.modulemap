@@ -1,0 +1,6 @@
+framework module Pods_AniMusic_1Tests {
+  umbrella header "Pods-AniMusic#1Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
