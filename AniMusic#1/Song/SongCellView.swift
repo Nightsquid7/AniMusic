@@ -18,7 +18,7 @@ struct SongCellView: View {
             
                 .frame(width: 50,height: 50)
 
-            VStack {
+            VStack(alignment: .leading) {
                 Text(song.name)
                     .font(.subheadline)
                 Text(song.artist)
