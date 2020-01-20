@@ -13,7 +13,6 @@
 		534F5CA223A71BA8007CCCB4 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534F5CA123A71BA8007CCCB4 /* HomePage.swift */; };
 		534F5CA423A71E54007CCCB4 /* AnimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534F5CA323A71E54007CCCB4 /* AnimeView.swift */; };
 		534F5CA623A72033007CCCB4 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534F5CA523A72033007CCCB4 /* SongView.swift */; };
-		534F5CAA23A74337007CCCB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 534F5CA923A74337007CCCB4 /* GoogleService-Info.plist */; };
 		53516F6223AB20FD009CFD55 /* PlayerControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53516F6123AB20FD009CFD55 /* PlayerControls.swift */; };
 		537692792396055400FB9754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537692782396055400FB9754 /* AppDelegate.swift */; };
 		5376927B2396055400FB9754 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5376927A2396055400FB9754 /* SceneDelegate.swift */; };
@@ -23,6 +22,7 @@
 		537692852396055500FB9754 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537692832396055500FB9754 /* LaunchScreen.storyboard */; };
 		537692902396055500FB9754 /* AniMusic_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5376928F2396055500FB9754 /* AniMusic_1Tests.swift */; };
 		5376929B2396055500FB9754 /* AniMusic_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5376929A2396055500FB9754 /* AniMusic_1UITests.swift */; };
+		5383204323D53B8F00436136 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5383204223D53B8F00436136 /* GoogleService-Info.plist */; };
 		53A8106623B5F64C007D1B87 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A8106523B5F64C007D1B87 /* String+.swift */; };
 		53A9012C23A7500A007676F2 /* AnimeSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9012B23A7500A007676F2 /* AnimeSessionStore.swift */; };
 		53A9012E23A7509A007676F2 /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9012D23A7509A007676F2 /* Anime.swift */; };
@@ -62,7 +62,6 @@
 		534F5CA123A71BA8007CCCB4 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		534F5CA323A71E54007CCCB4 /* AnimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeView.swift; sourceTree = "<group>"; };
 		534F5CA523A72033007CCCB4 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
-		534F5CA923A74337007CCCB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53516F6123AB20FD009CFD55 /* PlayerControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControls.swift; sourceTree = "<group>"; };
 		537692752396055400FB9754 /* AniMusic#1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AniMusic#1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		537692782396055400FB9754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		537692962396055500FB9754 /* AniMusic#1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AniMusic#1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5376929A2396055500FB9754 /* AniMusic_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniMusic_1UITests.swift; sourceTree = "<group>"; };
 		5376929C2396055500FB9754 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5383204223D53B8F00436136 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53A8106523B5F64C007D1B87 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		53A9012B23A7500A007676F2 /* AnimeSessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeSessionStore.swift; sourceTree = "<group>"; };
 		53A9012D23A7509A007676F2 /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 				537692832396055500FB9754 /* LaunchScreen.storyboard */,
 				537692862396055500FB9754 /* Info.plist */,
 				5348C1E923D52DDD008DECAB /* keys.plist */,
-				534F5CA923A74337007CCCB4 /* GoogleService-Info.plist */,
+				5383204223D53B8F00436136 /* GoogleService-Info.plist */,
 				537692802396055500FB9754 /* Preview Content */,
 			);
 			path = "AniMusic#1";
@@ -363,7 +363,7 @@
 				537692852396055500FB9754 /* LaunchScreen.storyboard in Resources */,
 				537692822396055500FB9754 /* Preview Assets.xcassets in Resources */,
 				5376927F2396055500FB9754 /* Assets.xcassets in Resources */,
-				534F5CAA23A74337007CCCB4 /* GoogleService-Info.plist in Resources */,
+				5383204323D53B8F00436136 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

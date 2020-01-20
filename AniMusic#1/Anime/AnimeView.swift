@@ -63,7 +63,8 @@ struct AnimeView: View {
             Image(uiImage: self.anime.image ?? UIImage(systemName: "photo")!)
                 .resizable()
                 .aspectRatio(1, contentMode: .fit)
-                .frame(width: g.size.width/3, height: g.size.width/3)
+                .frame(width: g.size.width/3)
+
 
             Picker(selection: self.$displayType, label: Text(""), content: {
                 Text("all").tag(DisplayType.all)
@@ -72,24 +73,30 @@ struct AnimeView: View {
             })
             .pickerStyle(SegmentedPickerStyle())
 
-            ZStack {
-                Rectangle()
-                    .frame(height: g.size.height/6)
-                    .onTapGesture {
-                        print("anime.songIds: \(self.anime.songIds)")
-                        self.appleMusicStore.createAnimePlaylist(from: self.anime, type: self.displayType)
-                }
-
-                Text(self.getDisplayTypeString())
-                    .foregroundColor(Color.white)
-
-            }
-
             self.displaySongs()
 
-        }
+            // add songs to playlist
+            ZStack {
+                Rectangle()
+                    .frame(width: g.size.width - 20, height: g.size.width/7)
+                    .onTapGesture {
+                        self.appleMusicStore.createAnimePlaylist(from: self.anime, type: self.displayType)
+                    }
+
+                HStack {
+
+                    Text("+")
+                        .foregroundColor(Color.white)
+                    Text(self.getDisplayTypeString())
+                        .foregroundColor(Color.white)
+                }
+
+            }
+            }
         }
         .navigationBarTitle(anime.id)
+
+
     }
 
 }

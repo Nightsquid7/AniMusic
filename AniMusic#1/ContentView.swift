@@ -13,10 +13,30 @@ import Firebase
 
 struct ContentView: View {
 
-    var body: some View {
+    @EnvironmentObject var animeSession: AnimeSessionStore
+    @EnvironmentObject var appleMusicStore: AppleMusicStore
 
-        HomePage()
-          
+    var body: some View {
+        NavigationView {
+            VStack {
+                Text("Anime")
+                    .font(.largeTitle)
+
+                if animeSession.list.count < 1 {
+                    Text("Loading... ^-^")
+                } else {
+                    List(animeSession.list) { anime in
+                        NavigationLink(destination: AnimeView(anime: anime), label: {
+                            AnimeCellView(anime: anime)
+                        })
+                    }
+                }
+            }
+        }
+        .onAppear(perform: {
+            self.animeSession.getAnimeList()
+            self.appleMusicStore.requestUserToken()
+        })
     }
 }
 
